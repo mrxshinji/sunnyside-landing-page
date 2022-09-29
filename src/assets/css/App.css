@@ -70,14 +70,24 @@ We provide the required social icons. But, if you prefer, you can use a font ico
   font-size: 18px;
 }
 
-body,
-#root,
-.container {
-  width: 100vw;
+body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  background-color: var(--GrayishBlue);
+}
+
+
+#root,
+.container {
+  width: 100vw;
+  max-width: 1558px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
 
 a {
@@ -229,6 +239,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  min-height: 512px;
   height: 40vh;
   background-position: center;
   background-size: cover;
@@ -573,7 +584,7 @@ header {
 }
 
 #header-text h1 {
-  font-size: 6vw;
+  font-size: 5vw;
 }
 
 /* ========== Header End ========== */
@@ -751,5 +762,12 @@ footer {
 
   footer {
     height: 20vh;
+  }
+}
+
+@media screen and (min-width:1559px) {
+  #header-text {
+    position: sticky;
+    top: 0rem;
   }
 }
