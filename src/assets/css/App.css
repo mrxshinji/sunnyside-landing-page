@@ -1,0 +1,755 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)
+
+### Neutral
+
+- Very dark desaturated blue: hsl(212, 27%, 19%)
+- Very dark grayish blue: hsl(213, 9%, 39%)
+- Dark grayish blue: hsl(232, 10%, 55%)
+- Grayish blue: hsl(210, 4%, 67%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+- Weights: 600
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700, 900
+
+## Icons
+
+We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root {
+  --SoftRed: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --GraphicDesignText: hsl(167, 40%, 24%);
+  --PhotographyText: hsl(198, 62%, 26%);
+  --Footer: hsl(168, 34%, 41%);
+  --VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+  --VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+  --DarkGrayishBlue: hsl(232, 10%, 55%);
+  --GrayishBlue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family: 'Barlow', sans-serif; */
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+}
+
+body,
+#root,
+.container {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+a:hover {
+  filter: brightness(0.5);
+}
+
+/* ========== Header ========== */
+
+header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 60vh;
+  background: url(../images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size:  100% 100%;
+  padding: 1.5rem 1rem;
+}
+
+.navbar {
+  display: none;
+  
+}
+
+/* Sidebar ========== */
+
+
+.nav-list button {
+  background: transparent;
+  border: none;
+  color: var(--White);
+  cursor: pointer;
+}
+
+.sidebar-box {
+  position: relative;
+  flex-grow: 1;
+  top: -4rem;
+  width: 90%;
+  height: auto;
+  padding: 2rem 0;
+  background-color: var(--White);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-box::before {
+  content:"";
+  border-style: solid;
+  border-width: 15px 15px 15px 15px;
+  border-color: transparent #fff #fff transparent;
+  top: 0;
+  right: 0;
+  transform: translateY(-95%);
+  position: absolute;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.side-item {
+  list-style: none;
+}
+
+.side-item a {
+  font-family: 'Barlow', sans-serif;
+  font-size: 600;
+  color: var(--DarkGrayishBlue);
+}
+
+#side-contact {
+  background-color: var(--Yellow);
+  padding: .5rem;
+  text-align: center;
+  width: 100px;
+  border-radius: 20px;
+}
+
+#side-contact a {
+  color: black;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+#side-contact:hover,
+#side-contact:focus {
+  filter: brightness(0.5);
+}
+
+
+/* Sidebar ========== */
+
+#header-text {
+  position: fixed;
+  text-align: center;
+  top: 7rem;
+}
+
+#header-text .active {
+  position: relative;
+}
+
+#header-text h1 {
+  position: relative;
+  color: var(--White);
+  font-weight: 900;
+  font-size: 2.2rem;
+  letter-spacing: 5px;
+  margin-bottom: 3rem;
+}
+
+/* ========== Header End ========== */
+
+/* ========== Main  ========== */
+
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+}
+
+.sub-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.sub-section .animation-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+section .text {
+  height: 55vh;
+}
+
+.sub-section h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 2rem 2rem 1rem 2rem;
+}
+
+.sub-section p {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: var(--DarkGrayishBlue);
+  margin: 0rem 1.5rem 1rem 1.5rem;
+  line-height: 25px;
+}
+
+.sub-section button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+  background: none;
+  margin: 1rem 0 2rem 0;
+}
+
+.sub-section button a {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.sub-section button::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  width: 120%;
+  background-color: var(--Yellow);
+  height: 10px;
+  border-radius: 5px;
+  z-index: -1;
+  filter: brightness(1.5);
+  opacity: .5;
+}
+
+.sub-section button:hover::after,
+.sub-section button:focus::after {
+  filter: brightness(1.0);
+  opacity: 1;
+}
+
+/* Section 1 */
+
+#info1 .pic{
+  background-image: url(../images/mobile/image-transform.jpg);
+}
+
+
+
+/* Section 2 */
+
+#info2 .pic {
+  background-image: url(../images/mobile/image-stand-out.jpg);
+}
+
+#info2 button::after {
+  background-color: var(--SoftRed);
+}
+
+/* Section 3 */
+
+section .overlay {
+  height: 75vh;
+  align-items: flex-end;
+}
+
+.overlay-text {
+  margin-bottom: 2rem;
+}
+
+.overlay-text p,
+.overlay-text h2 {
+  color: var(--GraphicDesignText);
+}
+
+#info3 {
+  background-image: url(../images/mobile/image-graphic-design.jpg);
+  background-size: cover;
+}
+
+#info4 {
+  background-image: url(../images/mobile/image-photography.jpg);
+  background-size: cover;
+}
+
+#info4 p,
+#info4 h2 {
+  color: var(--PhotographyText)
+}
+
+/* Testimonial */
+
+#testimonial,
+.testimonial {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+}
+
+#testimonial h3 {
+  margin: 3rem;
+  letter-spacing: 2px;
+  color: var(--GrayishBlue);
+}
+
+.testimonial-pic {
+  border-radius: 50%;
+  scale: 0.6;
+}
+
+.testimonial > p {
+  margin: 1rem 1rem;
+  color: var(--VeryDarkGrayishBlue);
+  font-family: sans-serif; 
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.testimonial-person p:first-child {
+  margin-bottom: .5rem;
+  font-weight: 900;
+}
+
+.testimonial-person p:nth-child(2) {
+  margin-bottom: 1rem;
+  color: var(--DarkGrayishBlue);
+  font-family: sans-serif; 
+}
+
+/* Section 4*/
+
+#gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sub-gallery {
+  position: relative;
+  width: 50%;
+  height: 25vh;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+#milkbottles {
+  background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+}
+
+#orange {
+  background-image: url(../images/mobile/image-gallery-orange.jpg);
+}
+
+#cone {
+  background-image: url(../images/mobile/image-gallery-cone.jpg);
+}
+
+#sugar {
+  background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+}
+
+.sub-gallery:hover {
+  scale: 1.5;
+  z-index: 50;
+  transition: 1s;
+}
+
+#milkbottles:hover,
+#cone:hover {
+  transform: translateX(20%);
+}
+
+#orange:hover,
+#sugar:hover {
+  transform: translateX(-20%);
+}
+
+
+
+/* ========== Main End ========== */
+
+/* ========== Foooter  ========== */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--Footer);
+  filter: brightness(1.6);
+}
+
+#logo {
+  height: auto;
+  width: auto;
+  scale: 1.4;
+  margin: 4rem 0 1rem 0;
+  
+}
+
+#logo path {
+  fill: var(--Footer);
+  filter: brightness(0.5);
+}
+
+.footer-list {
+  width: 100%;
+}
+
+.footerbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem
+}
+
+.footer-item {
+  list-style: none;
+}
+
+.footer-item a {
+  color: var(--GraphicDesignText);
+}
+
+.sns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.sns svg {
+  scale: 1.3;
+  color: var(--Footer);
+  filter: brightness(0.5)
+}
+
+/* ========== Foooter End ========== */
+
+
+
+
+
+/*  Min width 450px ========== */
+/*  Min width 450px ========== */
+
+/* collapsible button or navbar */
+@media screen and (min-width: 450px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+
+  .nav-item {
+    list-style: none;
+  }
+
+  .nav-item a {
+    color: var(--White);
+    font-size: 2vw;
+  }
+
+  #nav-contact {
+    background-color: var(--White);
+    padding: .5rem;
+    text-align: center;
+    width: 13vw;
+    border-radius: 30px;
+  }
+
+  #nav-contact a {
+    color: black;
+  }
+
+  #nav-contact:hover,
+  #nav-contact:focus {
+    background-color: #3DBEFF;
+    filter: brightness(1.1);
+  }
+  #nav-contact:hover a,
+  #nav-contact:focus a {
+    color: var(--White);
+    filter: brightness(1);
+  }
+
+
+  .nav-list button {
+    display: none;
+  }
+
+  /* ========== Header ========== */
+
+header {
+  background: url(../images/desktop/image-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:  cover;
+  padding: 1.5rem 1rem;
+}
+
+#header-text {
+  width: 100%;
+  top: 10rem;
+}
+
+#header-text h1 {
+  font-size: 6vw;
+}
+
+/* ========== Header End ========== */
+
+/* ========== Main  ========== */
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+
+.sub-section {
+  width: 50%;
+}
+
+section .text {
+  height: 40vh;
+}
+
+
+/* Section 1 */
+
+#info1 {
+  flex-direction: row-reverse;
+}
+
+#info1 .pic{
+  background-image: url(../images/desktop/image-transform.jpg);
+}
+
+/* Section 2 */
+
+#info2 .pic {
+  background-image: url(../images/desktop/image-stand-out.jpg);
+}
+
+/* Section 3 */
+
+section .overlay {
+  min-height: 547px;
+  height: 40vh;
+  min-width: 410px;
+  width: 100%;
+}
+
+#info3 {
+  width: 50%;
+  background-image: url(../images/desktop/image-graphic-design.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#info4 {
+  width: 50%;
+  background-image: url(../images/desktop/image-photography.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Testimonial */
+
+#testimonial {
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.testimonial {
+  width: 30%;
+}
+
+#testimonial h3 {
+  width: 100%;
+  margin: 3rem 0 1rem 0;
+}
+
+.testimonial-pic {
+  scale: 0.6;
+}
+
+.testimonial > p {
+  margin: 1rem .5rem;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+/* Section 4*/
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sub-gallery {
+  width: 25%;
+  height: 25vh;
+}
+
+#milkbottles {
+  background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+}
+
+#orange {
+  background-image: url(../images/desktop/image-gallery-orange.jpg);
+}
+
+#cone {
+  background-image: url(../images/desktop/image-gallery-cone.jpg);
+}
+
+#sugar {
+  background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+}
+
+/* ========== Main End ========== */
+
+/* ========== Foooter  ========== */
+
+footer {
+  height: 30vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#logo {
+  margin: 2rem 0 1rem 0;
+}
+
+.footer-list {
+  margin-bottom: 1rem;
+}
+
+
+/* ========== Foooter End ========== */
+}
+
+/*  Min width 450px ========== */
+
+@media screen and (min-width: 900px) {
+  .text {
+    gap: 0;
+    align-content: space-around;
+  }
+  .text h2 {
+    margin: 5rem 3rem 2rem 3rem;
+    font-size: 3vw;
+  }
+
+  .text p {
+    margin: 0 5rem;
+    font-size: 1.5vw;
+    line-height: 45px;
+  }
+
+  .text button a {
+    font-size: 2vw;
+  }
+
+  .overlay-text h2 {
+    font-size: 3vw;
+  }
+
+  .overlay-text p {
+    font-size: 1.2vw;
+  }
+
+  .testimonial > p {
+    font-size: 1vw;
+  }
+
+  footer {
+    height: 20vh;
+  }
+}
