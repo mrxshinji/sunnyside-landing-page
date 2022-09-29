@@ -1,7 +1,9 @@
 import React from "react";
 import Testimonials from "./Testimonials";
 
-// First Section type
+
+// First Section require 
+// id for animation-target, sectionRef, section, title, text, sectionVisible
 function Section1(props) {
     // text animation on trigger
     const before = {
@@ -36,6 +38,8 @@ function Section1(props) {
     )
 }
 
+
+// require section, title, text
 function Section2(props) {
     return (
         <section id={props.section}>
@@ -49,6 +53,7 @@ function Section2(props) {
     )
 }
 
+
 function Section4() {
     return (
         <section id='gallery'>
@@ -60,6 +65,7 @@ function Section4() {
     )
 }
 
+// require sectionRef1, sectionRef2, section1Visible, section2Visible
 export default function Main(props) {
     return (
         <main>

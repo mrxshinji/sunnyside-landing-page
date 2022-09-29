@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import logo from '../assets/images/logo.svg'
 import downArrow from '../assets/images/icon-arrow-down.svg'
 
+
+// props require toggleSidebar(func)
 export default function Header(props) {
 
     // sidebar toggle

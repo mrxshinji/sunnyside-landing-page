@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {ReactComponent as Logo} from '../assets/images/logo.svg'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';

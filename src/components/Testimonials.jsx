@@ -3,7 +3,7 @@ import emily from "../assets/images/image-emily.jpg"
 import thomas from "../assets/images/image-thomas.jpg"
 import jennie from "../assets/images/image-jennie.jpg"
 
-// props take image, alt , text, name, job
+// props require image, alt , text, name, job
 function Testimonial(props) {
     return (
         <div className="testimonial">
@@ -18,6 +18,7 @@ function Testimonial(props) {
         </div>
     )
 }
+
 
 export default function Testimonials() {
     return (

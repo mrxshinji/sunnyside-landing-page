@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import './assets/css/App.css';
 
 function App() {
-  // init active trigger
+  // init active trigger for intersectionObserver
   const sectionRef1 = useRef(null)
   const sectionRef2 = useRef(null)
   const allSection = [sectionRef1, sectionRef2]
@@ -17,11 +17,11 @@ function App() {
     threshold: [0.5],
   }
 
+  // init headerstate by scroll
   const [headerState, setHeaderState] = useState(true)
 
-
+  // event listener for scroll, intersectionObserver
   useEffect(() => {
-
     window.addEventListener('scroll', (e) => {
       (window.scrollY > 644) ? setHeaderState(false) : setHeaderState(true);
     })
@@ -44,7 +44,7 @@ function App() {
   }, [])
 
 
-
+  // APpp return
   return (
     <div className="container">
       <Header state={headerState} />
